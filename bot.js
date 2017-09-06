@@ -42,6 +42,8 @@ bot.message(function(message) {
                 var curEn = entities[Object.keys(entities)[0]];
                 var category = curEn[0].value;
                 util.sendMessage(channel, res[category]);
+            } else {
+                util.sendMessage(channel, "I can't answer your question right now, please make it clear!");
             }
         })
         .catch(console.error);
